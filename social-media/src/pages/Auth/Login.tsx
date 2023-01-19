@@ -4,7 +4,7 @@ import Layout from "../../components/Layout";
 
 import "../../styles/index.css";
 
-function Register() {
+function Login() {
   return (
     <Layout>
       <div className="w-full bg-center bg-slate-50">
@@ -16,24 +16,9 @@ function Register() {
             />
             <div className="card-body justify-between mt-1 place-self-center">
               <h1 className="text-center">Welcome!</h1>
-              <h1 className="text-start">Sign up to</h1>
+              <h1 className="text-start">Sign in</h1>
               <div className="flex-cols-row">
-                <label className="label">
-                  <span className="label-text text-lg text-white dark:text-black ">First Name</span>
-                </label>
-                <input
-                  type="text"
-                  placeholder="Type here"
-                  className="input input-bordered w-full max-w-xs border-black"
-                />
-                <label className="label">
-                  <span className="label-text text-lg text-white dark:text-black">Last Name</span>
-                </label>
-                <input
-                  type="text"
-                  placeholder="Type here"
-                  className="input input-bordered w-full max-w-xs border-black"
-                />
+                
               
                   <label className="label">
                     <span className="label-text text-lg text-white dark:text-black ">Email</span>
@@ -54,10 +39,10 @@ function Register() {
                 </div>
               <Button
                 className="btn bg-zinc-500 p-2 font-bold text-white hover:bg-zinc-400/90 dark:bg-zinc-800/90 dark:hover:bg-zinc-700/90 mt-5 w-full max-w-xs"
-                label="REGISTER"
+                label="LOGIN"
               />
               <label className="label-one">
-                <p className="font-normal font-weight-300 ">Already have an Account? <span className="font-bold text-black "> Login</span></p>
+                <p className="font-normal font-weight-300 ">Don't have an Account? <span className="font-bold text-black "> Register</span></p>
               </label>
             </div>
           </div>
@@ -67,4 +52,4 @@ function Register() {
   );
 }
 
-export default Register;
+export default Login;

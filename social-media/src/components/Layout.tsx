@@ -10,7 +10,7 @@ function Layout({ children }: Props) {
   return (
     <div className="w-full h-screen flex flex-col overflow-auto">
       <Navbar />
-      <div className="h-full w-full bg-white dark:bg-black bg-[url('../assets/layered-waves-haikei.svg')] bg-center bg-cover bg-no-repeat flex flex-col">
+      <div className="h-full w-full bg-white dark:bg-black flex flex-row">
         {children}
       </div>
     </div>

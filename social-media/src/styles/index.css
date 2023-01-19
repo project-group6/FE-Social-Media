@@ -42,3 +42,9 @@ p {
   font-family: "Poppins";
   font-style: normal;
 }
+
+h1.text-start{
+height: 40px;
+font-size: 32px;
+font-family: 'Comfortaa';
+}

@@ -53,7 +53,7 @@ function Register() {
                   />
                 </div>
               <Button
-                className="btn bg-zinc-500 p-2 font-bold text-white hover:bg-zinc-400/90 dark:bg-zinc-800/90 dark:hover:bg-zinc-700/90 mt-5 w-full max-w-xs"
+                className="btn  bg-zinc-500 p-2 font-bold text-white hover:bg-zinc-400/90 dark:bg-zinc-800/90 dark:hover:bg-zinc-700/90 mt-5 w-full max-w-xs"
                 label="REGISTER"
               />
               <label className="label-one">

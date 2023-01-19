@@ -22,7 +22,7 @@ const Navbar = () => {
       </div>
       <NavSearch />
 
-      <div className="hidden md:flex">
+      <div className="hidden md:flex cursor-pointer">
         <Avatar />
       </div>
 

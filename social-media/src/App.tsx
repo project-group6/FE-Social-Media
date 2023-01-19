@@ -4,14 +4,10 @@ import Post from "./components/PostCard";
 import PostForm from "./components/PostForm";
 import PostCard from "./components/PostCard";
 import Header from "./components/Header";
+import { useRef, useState } from "react";
 
 function App() {
-  return (
-    <div>
-      <Header />
-      <PostCard />
-    </div>
-  );
+  return <Navbar />;
 }
 
 export default App;

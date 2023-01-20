@@ -1,8 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Avatar from "./Avatar";
 import PostFormCard from "./PostForm";
+import { useDispatch } from "react-redux";
+import { useCookies } from "react-cookie";
+import { Link, useNavigate } from "react-router-dom";
 
 const PostCard = () => {
+  const [cookie, , removeCookie] = useCookies(["token"]);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
   return (
     <div className="flex justify-center mt-10">
       <div className="bg-white shadow-md shadow-gray-300 rounded-md mb-5 w-4/5 p-4">
@@ -80,7 +87,7 @@ const PostCard = () => {
             </svg>
             72
           </button>
-          <button className="flex gap-2 items-center">
+          <button className="flex gap-2 items-center " id="to-comment" onClick={() => navigate("/comment")}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

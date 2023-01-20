@@ -11,7 +11,7 @@ function Profile() {
   const [objSubmit, setObjSubmit] = useState<ProfileType>({});
   const [firstName, setFirstName] = useState<string>("");
   const [lastName, setLastName] = useState<string>("");
-  const [avatar, setAvatar] = useState<string>("");
+  const [image, setImage] = useState<string>("");
   const [email, setEmail] = useState<string>("");
 
   useEffect(() => {
@@ -20,13 +20,13 @@ function Profile() {
 
   const fetchData = async () => {
     axios
-      .get("profile")
+      .get("users")
       .then((res) => {
-        const { email, first_name, last_name, avatar } = res.data.data;
+        const { email, first_name, last_name, image } = res.data.data;
         setEmail(email);
         setFirstName(first_name);
         setLastName(last_name);
-        setAvatar(avatar);
+        setImage(image);
       })
       .catch((err) => {
         console.log(err);
@@ -69,8 +69,8 @@ function Profile() {
       <div className="card w-1/5 gap-4 p-3 shadow-sm shadow-black">
         <div className="w-100">
           <img
-            src={avatar}
-            className={avatar}
+            src={image}
+            className={image}
           />
           <Button id="btn-submit" label="Submit" loading={loading}/>
         </div>
@@ -87,7 +87,7 @@ function Profile() {
               if (!e.currentTarget.files) {
                 return;
               }
-              setAvatar(URL.createObjectURL(e.currentTarget.files[0]));
+              setImage(URL.createObjectURL(e.currentTarget.files[0]));
               handleChange(e.currentTarget.files[0], "avatar");
             }}
           />

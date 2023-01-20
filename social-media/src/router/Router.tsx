@@ -7,6 +7,7 @@ import { ThemeContext } from "utils/context";
 import Register from "pages/Auth/Register";
 import Login from "pages/Auth/Login";
 import Profile from "pages/Profile";
+import Comment from "pages/Comment/Comment";
 import Home from "pages/Home";
 
 axios.defaults.baseURL = "https://onallo.store/";
@@ -61,6 +62,10 @@ function App() {
             path: "*",
             element: <Navigate to="/login"/>,
         },
+        {
+            path: "/comment",
+            element: checkToken ? <Comment/> : <Navigate to="/"/>
+        }
       ]);
 
       return (

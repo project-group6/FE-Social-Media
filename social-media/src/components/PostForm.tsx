@@ -2,7 +2,7 @@ import Card from "./Card";
 import Avatar from "./Avatar";
 
 export default function PostFormCard() {
-  
+
 
   return (
     <div className="flex justify-center mt-10">

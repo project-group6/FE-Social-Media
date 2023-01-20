@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Poppins&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Comfortaa", cursive;
+  font-family: "Poppins", sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+h1.text-center {
+  font-family: poppins;
+  align-items: center;
+  display: flex;
+  height: 31px;
+  width: 128px;
+  font-size: 26px;
+  color: black;
+  letter-spacing: -0.015em;
+}
+
+span.label-text.text-lg.text-white.dark:text-black {
+  position: absolute;
+  left: 10.03%;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: black;
+}
+
+p {
+  font-size: 16px;
+  color: #7d7d7d;
+  font-family: "Poppins";
+  font-style: normal;
+}
+
+h1.text-start{
+height: 40px;
+font-size: 32px;
+font-family: 'Comfortaa';
+}

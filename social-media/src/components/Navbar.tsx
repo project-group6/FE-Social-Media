@@ -1,9 +1,6 @@
 import React, { useState } from "react";
-import { BsPerson } from "react-icons/bs";
-import { BiSearch } from "react-icons/bi";
-import { AiOutlineClose, AiOutlineSearch } from "react-icons/ai";
+import { AiOutlineClose } from "react-icons/ai";
 import { HiOutlineMenuAlt4 } from "react-icons/hi";
-import { FaFacebook, FaTwitter, FaInstagram, FaPinterest, FaYoutube } from "react-icons/fa";
 import logoNav from "../assets/logoNav.svg";
 import NavSearch from "./NavSearch";
 import Avatar from "./Avatar";
@@ -28,7 +25,7 @@ const Navbar = () => {
 
       {/* Hamburger */}
       <div onClick={handleNav} className="md:hidden z-10 text-white">
-        {nav ? <AiOutlineClose className="text-black" size={20} /> : <HiOutlineMenuAlt4 size={20} />}
+        {nav ? <AiOutlineClose size={20} /> : <HiOutlineMenuAlt4 size={20} />}
       </div>
 
       {/* Mobile menu dropdown */}
@@ -39,9 +36,10 @@ const Navbar = () => {
           <li className="border-b">Theme</li>
           <li className="border-b">Logout</li>
         </ul>
+        </div>
       </div>
-    </div>
   );
 };
+
 
 export default Navbar;

@@ -16,7 +16,7 @@ const Hero = () => {
           </div>
           <div>
             <button>
-              <AiOutlineSearch size={20} className="icon" style={{ color: "#ffffff" }} />
+              <AiOutlineSearch size={20} />
             </button>
           </div>
         </form>

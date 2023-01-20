@@ -1,12 +1,4 @@
 import React, { useState } from "react";
-import { BsPerson } from "react-icons/bs";
-import { BiSearch } from "react-icons/bi";
-import { AiOutlineClose, AiOutlineSearch } from "react-icons/ai";
-import { HiOutlineMenuAlt4 } from "react-icons/hi";
-import { FaFacebook, FaTwitter, FaInstagram, FaPinterest, FaYoutube } from "react-icons/fa";
-import logoNav from "../assets/logoNav.svg";
-import NavSearch from "./NavSearch";
-import Avatar from "./Avatar";
 
 const Header = () => {
   const [nav, setNav] = useState(false);

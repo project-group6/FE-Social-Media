@@ -1,12 +1,16 @@
 import { useState } from 'react'
-import Register from './Auth/Register'
-import Login from './Auth/Login';
-import Comment from './Comment/Comment';
+import PostCard from 'components/PostCard';
+import Layout from 'components/Layout';
 
 function App() {
 
     return(
-       <Comment/>
+        <>
+        <Layout> 
+        <PostCard />
+        </Layout>
+        </>
+      
     )
  
 }

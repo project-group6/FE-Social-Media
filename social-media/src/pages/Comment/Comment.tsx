@@ -2,6 +2,8 @@ import React from "react";
 import Button from "../../components/Buttom";
 import Layout from "../../components/Layout";
 
+import Avatar from "components/Avatar";
+
 import "../../styles/index.css";
 
 function Comment() {
@@ -13,7 +15,7 @@ function Comment() {
             <div className="flex h-full w-full gap-4 p-8 flex-wrap ">
               <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                 <div className="w-10 rounded-full">
-                  <img src="https://placeimg.com/80/80/people" />
+                  <Avatar/>
                 </div>
               </label>
               <div className="flex-1">

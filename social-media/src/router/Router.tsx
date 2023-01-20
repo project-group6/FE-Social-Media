@@ -9,7 +9,7 @@ import Login from "pages/Auth/Login";
 import Profile from "pages/Profile";
 import Home from "pages/Home";
 
-axios.defaults.baseURL = "https://app.swaggerhub.com/apis-docs/helmimuzkr/social-media-api/1.0#/";
+axios.defaults.baseURL = "https://onallo.store/";
 
 function App() {
     const [cookie, , removeCookie] = useCookies(["token"]);

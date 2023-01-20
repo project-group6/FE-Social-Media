@@ -51,9 +51,9 @@ function Login() {
 
   return (
     <Layout>
-      <div className="w-full bg-center bg-slate-50">
+      <div className="w-full bg-center bg-white dark:bg-black">
         <div className="flex h-full w-full flex-wrap items-center justify-center">
-          <div className="card w-4/5 gap-4 p-3 shadow-sm shadow-black lg:h-4/5 lg:card-side ">
+          <div className="card w-4/5 gap-4 p-3 shadow-sm shadow-black lg:h-4/5 lg:card-side bg-black dark:bg-white">
             <img
               className="h-3/5 w-2/5 place-self-center object-contain md:h-4/5 md:w-3/5 mx-auto"
               src="src/assets/gurl.svg"
@@ -63,8 +63,8 @@ function Login() {
                 className="flex flex-col gap-4 min-w-[40%]"
                 onSubmit={(e) => handleSubmit(e)}
               >
-                <h1 className="text-center">Welcome!</h1>
-                <h1 className="text-start">Sign in</h1>
+                <h1 className="text-center text-white dark:text-black">Welcome!</h1>
+                <h1 className="text-start text-white dark:text-black">Sign in</h1>
                 <div className="flex-cols-row">
                   <label className="label">
                     <span className="label-text text-lg text-white dark:text-black ">
@@ -90,13 +90,14 @@ function Login() {
                   />
                 </div>
                 <Button
-                  className="btn bg-zinc-500 p-2 font-bold text-white hover:bg-zinc-400/90 dark:bg-zinc-800/90 dark:hover:bg-zinc-700/90 mt-5 w-full max-w-xs"
+                  className="btn mt-5 w-full max-w-xs "
                   label="LOGIN"
+                  loading={loading || disabled}
                 />
                 <label className="label-one">
                   <p className="font-normal font-weight-300 ">
                     Don't have an Account?{" "}
-                    <span className="font-bold text-black "> Register</span>
+                    <Link to="/register" className="font-bold text-white dark:text-black"> Register</Link>
                   </p>
                 </label>
               </form>

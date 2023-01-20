@@ -2,9 +2,11 @@ import Card from "./Card";
 import Avatar from "./Avatar";
 
 export default function PostFormCard() {
+  
+
   return (
     <div className="flex justify-center mt-10">
-      <div className="bg-white shadow-md shadow-gray-300 rounded-md mb-5 w-4/5 p-4">
+      <div className="bg-white shadow-md shadow-gray-300 rounded-xl mb-5 w-4/5 p-4">
         <div className="flex gap-2">
           <div>
             <Avatar />

@@ -80,7 +80,7 @@ function Editprofile() {
           className="flex flex-col gap-4 min-w-[40%]"
           onSubmit={(e) => handleSubmit(e)}
         >
-          {/* <Input
+          <Input
             id="input-file"
             type="file"
             onChange={(e) => {
@@ -88,9 +88,9 @@ function Editprofile() {
                 return;
               }
               setImage(URL.createObjectURL(e.currentTarget.files[0]));
-              handleChange(e.currentTarget.files[0], "avatar");
+              handleChange(e.currentTarget.files[0], "image");
             }}
-          /> */}
+          />
           <div className="flex-cols-row">
             <label className="label">
               <span className="label-text text-lg text-white dark:text-black ">

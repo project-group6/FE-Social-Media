@@ -1,9 +1,11 @@
+import withReactContent from "sweetalert2-react-content";
 import { useNavigate, Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useCookies } from "react-cookie";
 import axios from "axios";
 
+import Swal from "utils/Swal";
 import Button from "../../components/Buttom";
 import { handleAuth } from "utils/redux/reducers/reducer";
 import Layout from "../../components/Layout";
@@ -12,6 +14,7 @@ import "../../styles/index.css";
 
 function Login() {
   const [, setCookie] = useCookies(["token"]);
+  const MySwal = withReactContent(Swal);
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [disabled, setDisabled] = useState<boolean>(true);
@@ -40,6 +43,11 @@ function Login() {
         const { data, message } = res.data;
         setCookie("token", data.token, { path: "/" });
         dispatch(handleAuth(true));
+        MySwal.fire({
+          title: "Success",
+          text: message,
+          showCancelButton: false,
+        });
         navigate("/");
       })
       .catch((err) => {

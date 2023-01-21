@@ -1,13 +1,16 @@
+import withReactContent from "sweetalert2-react-content";
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
+import Swal from "utils/Swal"
 import Button from "../../components/Buttom";
 import Layout from "../../components/Layout";
 
 import "../../styles/index.css";
 
 function Register() {
+  const MySwal = withReactContent(Swal);
   const navigate = useNavigate();
   const [disabled, setDisabled] = useState<boolean>(true);
   const [loading, setLoading] = useState<boolean>(false);
@@ -37,6 +40,11 @@ function Register() {
       .post("register", body)
       .then((res) => {
         const { message, data } = res.data;
+        MySwal.fire({
+          title: "Success",
+          text: message,
+          showCancelButton: false,
+        });
         if (data) {
           navigate("/login");
         }

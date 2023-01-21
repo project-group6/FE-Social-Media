@@ -21,7 +21,7 @@ function Comment() {
   }, []);
 
   function fetchData() {
-    axios.post("/comments?post_id=")
+    axios.post("/comments")
     .then((res) => {
       setComments(res.data);
     })

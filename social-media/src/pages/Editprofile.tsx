@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { ProfileType } from "utils/types/profile";
 import axios from "axios";
 
 import Layout from "components/Layout";
 import Input from "components/Input";
 import Button from "components/Buttom";
+import { ProfileType } from "utils/types/profile";
 
-function Profile() {
+function Editprofile() {
   const [loading, setLoading] = useState<boolean>(true);
   const [objSubmit, setObjSubmit] = useState<ProfileType>({});
   const [firstName, setFirstName] = useState<string>("");
@@ -80,7 +80,7 @@ function Profile() {
           className="flex flex-col gap-4 min-w-[40%]"
           onSubmit={(e) => handleSubmit(e)}
         >
-          <Input
+          {/* <Input
             id="input-file"
             type="file"
             onChange={(e) => {
@@ -90,7 +90,7 @@ function Profile() {
               setImage(URL.createObjectURL(e.currentTarget.files[0]));
               handleChange(e.currentTarget.files[0], "avatar");
             }}
-          />
+          /> */}
           <div className="flex-cols-row">
             <label className="label">
               <span className="label-text text-lg text-white dark:text-black ">
@@ -135,4 +135,5 @@ function Profile() {
   );
 }
 
-export default Profile;
+export default Editprofile;
+
